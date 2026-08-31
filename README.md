@@ -1,16 +1,88 @@
-# React + Vite
+#  Feed Post Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A full-stack MERN application where users can create posts with images, captions, and tags. Uploaded images are stored using ImageKit, post data is stored in MongoDB, and the latest posts are displayed first in the feed.
 
-Currently, two official plugins are available:
+##  Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+### Frontend
+[View Frontend](https://feed-post-kohl.vercel.app/)
 
-## React Compiler
+### Backend API
+[View bAckend](https://feed-post-3tn7.onrender.com)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the Oxlint configuration
+##  Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+- 📸 Upload images
+- 📝 Add captions to posts
+- #️⃣ Add tags
+- 🖼️ Image storage using ImageKit
+- 🗄️ Store post data in MongoDB
+- 🆕 Latest posts appear first
+- ⏳ Loading state while uploading posts
+- 🔄 Automatic redirect to the feed after successful post creation
+- 📱 Responsive user interface
+- ☁️ Backend deployed on Render
+- 🚀 Frontend deployed online
+
+---
+
+##  Tech Stack
+
+### Frontend
+
+- React.js
+- Vite
+- React Router DOM
+- Axios
+- Tailwind CSS
+
+### Backend
+
+- Node.js
+- Express.js
+- MongoDB
+- Mongoose
+- Multer
+- ImageKit
+
+---
+
+##  Project Structure
+
+```text
+feed-post/
+│
+├── bAckend/
+│   ├── src/
+│   │   ├── db/
+│   │   ├── model/
+│   │   ├── services/
+│   │   └── app.js
+│   │
+│   ├── server.js
+│   ├── package.json
+│   └── .env
+│
+├── src/
+│   ├── assets/
+│   ├── App.jsx
+│   ├── create_post.jsx
+│   ├── feed.jsx
+│   ├── index.css
+│   └── main.jsx
+│
+├── public/
+├── package.json
+└── README.md
+
+
+
+```
+---
+
+<p align="center">
+  Made with ❤️ by 
+  <a href="https://github.com/amansethiya">Aman Sethiya</a>
+</p>
