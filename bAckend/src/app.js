@@ -25,7 +25,7 @@ app.post("/create-post", upload.single("image"), async (req, res) => {
 });
 
 app.get("/feed", async (req, res) => {
-  const post = await postModel.find();
+  const post = await postModel.find().sort({ _id: -1 });
 
   res.status(200).json({
     post,

@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 
 const create_post = () => {
   const navigate = useNavigate();
+  const [loading, setLoading] = useState(false);
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
+
     const formData = new FormData(e.target);
     axios
       .post("https://feed-post-3tn7.onrender.com/create-post", formData)
@@ -15,6 +18,7 @@ const create_post = () => {
       })
       .catch((err) => {
         (console.log(err), alert("making some mistake!!!"));
+        setLoading(false);
       });
   };
   return (
@@ -62,10 +66,11 @@ const create_post = () => {
           />
           <button
             type="submit"
+            disabled={loading}
             value="Submit"
             className="border-1 w-[800px] rounded-xs bg-[#ffffff] p-1 cursor-pointer text-[#b40000] font-bold"
           >
-            Add to Feed
+            {loading ? "Uploading Post..." : "Add to Feed"}
           </button>
         </form>
       </section>
