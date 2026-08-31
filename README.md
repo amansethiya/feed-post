@@ -8,7 +8,7 @@ A full-stack MERN application where users can create posts with images, captions
 [View Frontend](https://feed-post-kohl.vercel.app/)
 
 ### Backend API
-[View bAckend](https://feed-post-3tn7.onrender.com)
+[View bAckend](https://feed-post-3tn7.onrender.com/feed)
 
 ---
 
