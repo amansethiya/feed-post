@@ -1,15 +1,17 @@
 import React from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const create_post = () => {
   const handleSubmit = async (e) => {
+    const navigate = useNavigate();
     e.preventDefault();
     const formData = new FormData(e.target);
     axios
       .post("https://feed-post-3tn7.onrender.com/create-post", formData)
       .then((res) => {
         console.log(res);
+        navigate("/");
       })
       .catch((err) => {
         (console.log(err), alert("making some mistake!!!"));
@@ -39,6 +41,7 @@ const create_post = () => {
               type="file"
               name="image"
               accept="image/*"
+              required
               className="border-1 w-[800px] bg-[#1f1f1f]  rounded-xs px-2 py-0.5 "
             />
           </div>
@@ -47,6 +50,7 @@ const create_post = () => {
             placeholder="Enter Caption"
             name="caption"
             maxLength={30}
+            required
             className="border-1 w-[800px] bg-[#1f1f1f] rounded-xs px-2 py-0.5"
           ></textarea>
 
@@ -54,6 +58,7 @@ const create_post = () => {
             placeholder="Add Tags"
             type="text"
             name="tags"
+            required
             className="border-1 w-[800px] bg-[#1f1f1f]  rounded-xs px-2 py-0.5 "
           />
           <button
