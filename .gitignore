@@ -1,0 +1,18 @@
+# Frontend dependencies
+node_modules/
+
+# Backend dependencies
+bAckend/node_modules/
+
+# Environment files
+.env
+bAckend/.env
+
+# Build files
+dist/
+bAckend/dist/
+
+# Logs
+*.log
+
+.DS_Store
