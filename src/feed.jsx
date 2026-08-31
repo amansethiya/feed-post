@@ -8,7 +8,7 @@ const Feed = () => {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:3000/feed").then((res) => {
+    axios.get("https://feed-post-3tn7.onrender.com/feed").then((res) => {
       setPosts(res.data.post);
     });
   }, []);

@@ -7,7 +7,7 @@ const create_post = () => {
     e.preventDefault();
     const formData = new FormData(e.target);
     axios
-      .post("http://localhost:3000/create-post", formData)
+      .post("https://feed-post-3tn7.onrender.com/create-post", formData)
       .then((res) => {
         console.log(res);
       })
