@@ -3,8 +3,8 @@ import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 
 const create_post = () => {
+  const navigate = useNavigate();
   const handleSubmit = async (e) => {
-    const navigate = useNavigate();
     e.preventDefault();
     const formData = new FormData(e.target);
     axios
@@ -31,7 +31,6 @@ const create_post = () => {
         </h1>
 
         <form
-          action="/"
           onSubmit={handleSubmit}
           className="flex flex-col items-center  gap-4 pt-8 pb-20"
         >
