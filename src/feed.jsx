@@ -14,18 +14,18 @@ const Feed = () => {
   }, []);
   return (
     <>
-      <section className="feeds py-10">
-        <h1 className="text-center text-2xl font-bold text-[#f80000] py-10">
+      <section className="w-full  h-full flex flex-col gap-10  pt-10 ">
+        <Link
+          to="./create-post"
+          className="text-center cursor-pointer w-[50%] self-center text-[#eff0f5] text-sm border-2 py-2 px-10 rounded-xl"
+        >
+          Create Post
+        </Link>
+        <h1 className="text-center text-xl  font-bold text-[#f80000] px-8 pt-15">
           Feeds That Created By You Guys{" "}
-          <Link
-            to="./create-post"
-            className="cursor-pointer text-[#eff0f5] text-[16px] border-2 py-1 px-3 rounded-xl ml-5"
-          >
-            Create Post
-          </Link>
         </h1>
 
-        <div className="grid grid-cols-4 gap-2 px-5">
+        <div className="grid sm:grid-cols-4 grid-cols-2 gap-2 px-5">
           {posts.length > 0 ? (
             posts.map((post) => (
               <div
